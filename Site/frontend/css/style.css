@@ -1,0 +1,246 @@
+.mt-2 {
+    margin-top: 150px;
+    padding: 50px 0px 50px 0px;
+}
+
+.nav-link{
+    transition: all .35s ease;
+    cursor: pointer;
+}
+
+.nav-link:hover{
+    transform: translateY(-12px) scale(1.08);
+
+    box-shadow: 0 20px 35px rgba(0,0,0,.25);
+
+    z-index: 10;
+    
+}
+
+.bg-fundo1 {
+    background-color: #0B132B !important;
+}
+
+.bg-fundo2{
+    background-color: #212529;
+}
+
+.bg-fundo3{
+    background-color: #EDF2F7;
+}
+
+.bg-fundo4{
+    background-color: #0B132B;
+}
+
+.bg-fundo5{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bg-fundo6{
+    background-color: #0A0F1D;
+}
+
+.bg-carrossel-cinza {
+    background-color: #f4f6f9 !important;
+}
+
+.bg-offwhite1{
+    background-color: #F8F9FA;
+}
+
+#texto1{
+    color:#1A1D20
+}
+
+.footer-link:hover{
+    color: #43ffef !important;
+    transform: translateY(-2px);
+}
+
+.fundo-gradiente {
+    background: linear-gradient(to right, #004080, #004080, #004080, white, white, white);
+}
+
+.mt-2 {
+    margin: 150px 20px 50px 20px;
+}
+
+
+.carousel-item {
+    text-align: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: #f0f7daa4;
+    border-radius: 50%;
+}
+
+.carousel-control-prev {
+    left:30%;
+}
+
+.carousel-control-next {
+    right: 30%;
+}
+
+.card-membro img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    align-items: center;
+}
+
+.membros {
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px auto 0;
+}
+
+.scrollspy-example {
+    height: 550px;
+    overflow-y: auto;
+}
+
+#list-example {
+    position: sticky;
+    top: 120px; /* altura da navbar */
+}
+
+.parteAnimacao {
+    margin-top: 150px;
+    position: relative;
+}
+
+/* Corredor */
+#corredores {
+    position: relative;
+}
+
+/* Inicia a animação ao passar o mouse */
+.parteAnimacao:hover #corredores {
+    animation: correr 2s forwards;
+}
+
+/* Movimento */
+@keyframes correr {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(150px);
+    }
+}
+
+/* Card escondido */
+.mensagem {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(0);
+
+    opacity: 0;
+
+    z-index: 9999;
+}
+
+/* Mostra o card */
+.parteAnimacao:hover .mensagem {
+    animation: aparecer 0.5s 2s forwards;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.text-center{
+    color: #F8F9FA;
+}
+
+#link:hover{
+    color: #a3a4a5;
+}
+
+@media (max-width: 768px) {
+
+    .navbar-brand {
+        font-size: 1rem !important;
+    }
+
+    .mt-2 {
+        margin: 50px 10px;
+    }
+
+    #img1{
+        opacity: 0;
+    }
+
+    #texto1{
+        position: relative;
+    }
+
+    #texto1::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: url("../assets/images/logos/IMG-20260506-WA0112-removebg-preview.png")
+                    center / 180px ;
+
+        opacity: 0.2;
+    }
+
+    .carousel-control-prev {
+        left: 5%;
+    }
+
+    .carousel-control-next {
+        right: 5%;
+    }
+
+    .membros,
+    .card-membro img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .scrollspy-example {
+        height: 300px;
+    }
+
+    .parteAnimacao {
+        margin-top: 50px;
+    }
+
+    .parteAnimacao .d-flex {
+        flex-direction: column;
+        gap: 20px !important;
+    }
+
+    #corredores,
+    .parteAnimacao img {
+        opacity: 0;
+    }
+
+    .mensagem {
+        width: 90% !important;
+    }
+
+    .fundo-gradiente {
+        background: #004080;
+    }
+}
